@@ -3,26 +3,27 @@ options = ["Rock", "Paper", "Scissors"]
 
 computer = options[random.randint(0, 2)]
 
-player = input("Rock, Paper, or Scissors")
-if player == computer:
-    print('Tie!')
-elif player == "Rock":
-    if computer == "Paper":
-        print('You win!')
+for tries in range (4): 
+    player = input("Rock, Paper, or Scissors")
+    if player == computer:
+        print('Tie!')
+    elif player == "Rock":
+        if computer == "Paper":
+            print('You win!')
+        else:
+            print('lost')
+    elif player == "Paper":
+        if computer == "Scissors":
+            print('You lose')
+        else:
+            print('You win')
+    elif player == "Scissors":
+        if computer == "Rock":
+            print('You lost')
+        else:
+            print('You win')
     else:
-        print('lost')
-elif player == "Paper":
-    if computer == "Scissors":
-        print('You lose')
-    else:
-        print('You win')
-elif player == "Scissors":
-    if computer == "Rock":
-        print('You lost')
-    else:
-        print('You win')
-else:
-    print("That not a valid!")
+        print("That not a valid!")
 
 
 # prompt user, rock paper scissors
